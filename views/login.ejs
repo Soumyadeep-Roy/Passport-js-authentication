@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Raleway:ital,wght@0,100;0,400;0,500;1,300&display=swap" rel="stylesheet">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    background-color: rgb(25, 25, 24);
+}
+
+.frm {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    background-color: #D6EAF8;
+    width: 300px;
+    height: 400px;
+    padding: 20px 50px 30px 50px;
+    box-shadow: 10px 10px #5D6D7E;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 550px;
+}
+
+input[type=text], input[type=number], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 22px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=checkbox] {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 22px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.signup {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 25px;
+}
+
+.btn1 {
+    background-color: #2874A6 ;
+    border: none;
+    color: white;
+    margin-top: 10px;
+    padding: 14px 28px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+  }
+  
+.btn1:hover {
+    background-color: #5DADE2;
+}
+</style>
+
+<body>
+    <form method="POST" action="/users/login">
+        <div class="frm">
+        <p class="signup"><b>LOGIN</b></p>
+        <div class ="container">
+        <label for="email">Email:</label>
+        <input type="email" placeholder="Enter Email" name="email" required>
+        <label for="psw">Enter Password:</label>
+        <input type="password" placeholder="Enter Password" name="password" id="input" required>
+        <button type="submit" class="btn1">Login</button>
+        <div><br></div>
+        <div>New User ?
+            <a href="/users/register">Register</a>
+        </div>    
+        </div>
+        </div>
+    </form>
+</body>
+</html>

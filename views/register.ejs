@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Raleway:ital,wght@0,100;0,400;0,500;1,300&display=swap" rel="stylesheet">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    background-color: rgb(25, 25, 24);
+}
+
+.frm {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    background-color: #D6EAF8;
+    width: 300px;
+    height: 620px;
+    padding: 20px 50px 30px 50px;
+    box-shadow: 10px 10px #5D6D7E;
+    margin-top: 30px;
+    margin-left: 550px;
+}
+
+input[type=text], input[type=number], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 2px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 2px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.signup {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: black;
+}
+
+.btn1 {
+    background-color: #2874A6 ;
+    border: none;
+    color: white;
+    margin-top: 10px;
+    padding: 14px 28px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}
+  
+.btn1:hover {
+    background-color: #5DADE2;
+}
+
+.warnings {
+    size: 12px;
+}
+
+p {
+    font-size: 13px;
+    color: red;
+}
+
+</style>
+
+<body>
+    <form method="POST" action="/users/register">
+        <div class="frm">
+        <p class="signup"><b>REGISTER</b></p>
+        <div class ="container">
+        <label for="email">Email:</label>
+        <input type="email" placeholder="Enter Email" name="email" required>
+        <label for="username">Username:</label>
+        <input type="text"  placeholder="Enter a username" name="username" required>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="prefer not to say">Prefer not to say</option>
+        </select>
+        <label for="age">Age:</label>
+        <input type="number"  placeholder="Enter your age" onclick="myFunction2()" id="age" name="age" required>
+        <label for="password">Enter Password:</label>
+        <input type="password" placeholder="Enter Password" name="password" id="input" required>
+        <label for="password2">Re-Enter the Password:</label>
+        <input type="password" placeholder="Enter Password" name="password2" id="input" required>
+        <button type="submit" class="btn1">Register</button>
+        <div><br></div>
+        <div> Already registered ?
+            <a href="/users/login">Login</a>
+        </div>
+        <p>Passwords should have at least 6 characters</p>
+        <P>Make sure to re-enter the same password</P>
+        </div>
+        </div>
+    </form>
+</body>
+</html>
